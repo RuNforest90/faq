@@ -1,0 +1,61 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+}
+
+#selector_id {
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    background-color: rgb(236, 245, 245);
+}
+
+.Card {
+    background-color: rgb(92, 164, 167);
+    width: 260px;
+    height: 380px;
+    display: inline-block;
+    margin: 16px;
+    border: 4px solid rgb(44, 233, 233);
+    border-radius: 16px;
+    transition: box-shadow .25s, opacity .25s;
+    padding: 16px;
+    opacity: .85;
+}
+
+.Card:hover {
+    box-shadow: 14px 4px 2px rgb(1, 172, 172);
+    opacity: 4;
+}
+
+.Card_dashed {
+    border: 4px dashed rgb(13, 231, 231) ;
+}
+
+.Card_radius-0 {
+    border-radius: 0;
+}
+
+.Card_radius-7 {
+    border-radius: 7px;
+}
+
+.Card__image {
+    height: 120px;
+    width: 120px;
+}
+
+.Card__title {
+    color:rgb(230, 222, 222);
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.Card__info {
+    color:rgb(126, 182, 182);
+    font-size: 16px;
+    font-weight: 400;
+}
