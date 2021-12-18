@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    transform: rotate(0deg);
+    transition: transform ease-in-out 0.5s;
+}
+.box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+    animation: animateSurface 1.5s ease-in-out infinite
+}
+
