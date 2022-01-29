@@ -123,3 +123,42 @@ html, body{
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.Section__content {
+    margin-top: 32px;
+}
+
+.Content__text {
+    font-size: 20px;
+}
+
+.Content__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.List__element {
+    margin: 25px;
+}
+
+.Element__img img {
+    border-radius: 20px;
+}
+
+.Element__title {
+    padding: 0 16px;
+    font-weight: 900;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.Element__info {
+    padding: 0 16px;
+    font-weight: 500;
+    font-size: 18px;
+    font-size: 400;
+}
