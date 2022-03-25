@@ -1,5 +1,7 @@
 $(document).ready(function() {
   console.log('ready');
+  $('#slide_2').hide();
+  $('#slide_1').show();
 
   $('#mark_1').click(function(){
       $('#slide_2').hide();
