@@ -194,33 +194,39 @@ flex-direction: row;
     
 }
 .Image_1{
-    width: 256px;
-    height: 256px;
+    width: 260px;
+    height: 260px;
 }
 .Card_1 {
     margin-right: 250px;
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
+    font-weight: 600;
 }
 .Card_2 {
     margin-right: 250px;
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    
 }
 .Card_3 {
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
+    font-weight: 600;
 }
 .Logo__1{
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 55px;
+    font-weight: 60px;
 }
 .Logo__2{
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 55px;
+    font-weight: 60px;
 }
