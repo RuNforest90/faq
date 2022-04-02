@@ -35,8 +35,6 @@ html, body {
 
 .site__slider {
     width: 968px;
-    
-
 }
 
 .menu__mark {
@@ -179,54 +177,67 @@ display: flex;
 flex-direction: row;
     justify-content: center;
     align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: 600;
 }
-.Logo__2{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.Cards{
+.Cards_img{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     
-}
-.Image_1{
-    width: 260px;
-    height: 260px;
-}
-.Card_1 {
-    margin-right: 250px;
-    color: white;
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 600;
-}
-.Card_2 {
-    margin-right: 250px;
-    color: white;
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 600;
     
 }
-.Card_3 {
+.Image_1{
+    width: 320px;
+    height: 320px;
+}
+.Card_text{
     color: white;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+.Logo__card{
+    color: white;
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+.site_logo{
+    color: white;
+    text-decoration: none;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px; 
     font-weight: 600;
 }
-.Logo__1{
-    color: white;
-    text-decoration: none;
-    font-size: 55px;
-    font-weight: 60px;
+.Cards_top{
+display: flex;
+flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    font-size: 40px;
+    font-weight: 600;
 }
-.Logo__2{
-    color: white;
-    text-decoration: none;
-    font-size: 55px;
-    font-weight: 60px;
+.Cards_bottom {
+display: flex;
+flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    font-size: 40px;
+    font-weight: 600;
+}
+.Cards_imgs{
+    width: 180px;
+    height: 180px;
 }
