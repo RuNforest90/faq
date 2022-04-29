@@ -22,7 +22,7 @@
 
 .matrix {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
@@ -30,7 +30,7 @@
 }
 
 .cube {
-    background-color: #1a1a1a;
+    background-color: #1b1b1b;
     height: 198px;
     width: 320px;
     border-radius: 2px;
