@@ -2,24 +2,16 @@ const game = {
     height: 198,
     weight: 320,
     matrix: 2,
-    cards: [
-        {
-            color: '#87D204',
-            isShow: false,
-        },
-        {
-            color: '#D27904',
-            isShow: false,
-        },
-        {
-            color: '#87D204',
-            isShow: false,
-        },
-        {
-            color: '#D27904',
-            isShow: false,
-        },
-    ]    
+    cards: [],      
+    getCardById: (cards, cardId)  => {
+        let card = null;
+        cards.map(c => {
+            if (c.id === cardId) {
+                card = c;
+            }
+        });
+        return card;
+    }
 }
 
 game.cards = generateCards(game.matrix);
@@ -29,18 +21,18 @@ function generateCards(matrix) {
     const countCards = (matrix * matrix) / 2;
 
     for (let i = 0; i < countCards; i++) {
-        const e = {
-            color: randomcolorRGB(),
-            isShow: false,
-        };
-   
-        cards.push(e);
+        const color: randomColorRGB();
+        color.push(color);
+        color.push(color);
     }
+        
+    const cards = [];
+    for ( let i = 0; i < );
+
+    return sortArray([...cards, ...cards]);
+}
     
-    return softArray = ([...cards, ...cards]);
-
-
-    function softArray(array)
+function softArray(array) {
     for (let i = 0; i < 64; i++) {
         array.soft(() => Math.random() - 0,5);
     }
@@ -53,6 +45,10 @@ function randomcolorRGB() {
     randomcolorRGB(0, 255) + ',' +
     randomcolorRGB(0, 255) + ',' +
     randomcolorRGB(0, 255) + ')';
+}
+
+function randomColorRGB() {
+    return 'rgb('+ randomNumber(0, 255) +', '+ randomNumber(0, 255)+', '+ randomNumber(0, 255)+' )';
 }
 
 function randomNumber(min,max) {
@@ -75,8 +71,14 @@ $(document).ready(function () {
             $("#cube_" + i).css({
                 "background-color": e.color
             });
-
             console.log(Number(id.replace('cube_', '')));
+
+            const card = game.getCardById(
+                game.cards,
+                Number(id.replace('cube_',''))
+            );
+
+            console.log(card);
         });
     }
 });
