@@ -7,14 +7,14 @@
 html, body {
     display: flex;
     justify-content: center;
-    background-color: rgb(172, 137, 42);
+    background-color: rgb(235, 220, 179);
 }
 
 .main {
     width: 1000px;
     height: 2700px;
     background-color: white;
-    border-radius: 50px;
+    border-radius: 35px;
     margin-top: 25px;
 }
 
@@ -438,7 +438,7 @@ html, body {
 .end {
     width: 1000px;
     height: 200px;
-    background-color: rgb(202, 169, 71);
+    background-color: rgb(223, 222, 219);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
