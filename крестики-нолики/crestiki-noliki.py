@@ -7,10 +7,10 @@ def draw_board(board): # название функция
         print("|", board[0+i*3], "|", board[1+i*3], "|", board[2+i*3], "|")
         print("." * 13)
 
-#ведение числа для хода и их проверка
+#ведение числа для хода и проверки
 def take_input(player_token): #функция
     valid = False
-    while not valid: #тело-цикл, пока проверяймое условие истеное
+    while not valid: #тело-цикл, пока проверяймое условие истинное
         player_answer = input("куда поставим(X)" + player_token)
         try:
             player_answer = int(player_answer) #ведение числа
@@ -33,7 +33,7 @@ def check_win(board): #функция
         if board[each[0]] == board[each[1]] == board[each[2]]:
             return board[each[0]]
     return False
-
+    
 # кто выйграл
 def main(board):
     count = 0
@@ -42,7 +42,7 @@ def main(board):
         draw_board(board) 
         if count % 2 == 0: # если четное то выйграл X
             take_input("X") 
-        else: # если не четное то выйграл O
+        else: # если нечетное то выйграл O
             take_input("O") 
         count +=1
 
