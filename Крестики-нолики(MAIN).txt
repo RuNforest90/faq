@@ -1,0 +1,48 @@
+import random
+Main =[1, 2, 3, 4, 5, 6, 7, 8, 9]
+B=0
+while B<9:
+    print("", Main[0], "|", Main[1], "|", Main[2], "\n", "—", "|", "—", "|", "—", "\n", Main[3], "|", Main[4], "|", Main[5], "\n", "—", "|", "—", "|", "—", "\n", Main[6], "|", Main[7], "|", Main[8])
+    d=0
+    while d<1:
+        e=0
+        while e<1:
+            c=int(input("КАКУЮ КЛЕТКУ ВЫ ВЫБЕРИТЕ ДЛЯ X:"))
+            if c<1 or c>9:
+                print("ДАННОЕ ЧИСЛО ОТСУТСТВУЕТ.")
+            else:
+                e+=1
+        c-=1
+        if Main[c]=="X" or Main[c]=="O":
+            print("ЕСЛИ МЕСТО НЕТУ, ТО ВЫБИРАЙТЕ ДРУГУЮ КЛЕТКУ ДЛЯ ХОДА.")
+        else:
+            Main[c]="X"
+            d+=1
+    if Main[0]==Main[1]==Main[2] or Main[3]==Main[4]==Main[5] or Main[6]==Main[7]==Main[8] or Main[0]==Main[3]==Main[6] or Main[1]==Main[4]==Main[7] or Main[2]==Main[5]==Main[8] or Main[0]==Main[4]==Main[8] or Main[6]==Main[4]==Main[2]:
+        print("", Main[0], "|", Main[1], "|", Main[2], "\n", "—", "|", "—", "|", "—", "\n", Main[3], "|", Main[4], "|", Main[5], "\n", "—", "|", "—", "|", "—", "\n", Main[6], "|", Main[7], "|", Main[8])
+        print("ПОЗДРАВЛЯЮ, ВЫ ПОБЕДИЛИ!!!!.")
+        b=9
+    else:
+        if B==8:
+            B+=1
+            print("", Main[0], "|", Main[1], "|", Main[2], "\n", "—", "|", "—", "|", "—", "\n", Main[3], "|", Main[4], "|", Main[5], "\n", "—", "|", "—", "|", "—", "\n", Main[6], "|", Main[7], "|", Main[8])
+            print("НИЧЬЯ.")
+        else:
+            B+=1
+            print("", Main[0], "|", Main[1], "|", Main[2], "\n", "—", "|", "—", "|", "—", "\n", Main[3], "|", Main[4], "|", Main[5], "\n", "—", "|", "—", "|", "—", "\n", Main[6], "|", Main[7], "|", Main[8])
+            print("БОТ .")
+            d=0
+            while d<1:
+                c=random.randint(1, 9)
+                c-=1
+                if Main[c]=="X" or Main[c]=="O":
+                    d=0
+                else:
+                    Main[c]="O"
+                    d+=1
+            if Main[0]==Main[1]==Main[2] or Main[3]==Main[4]==Main[5] or Main[6]==Main[7]==Main[8] or Main[0]==Main[3]==Main[6] or Main[1]==Main[4]==Main[7] or Main[2]==Main[5]==Main[8] or Main[0]==Main[4]==Main[8] or Main[6]==Main[4]==Main[2]:
+                print("", Main[0], "|", Main[1], "|", Main[2], "\n", "—", "|", "—", "|", "—", "\n", Main[3], "|", Main[4], "|", Main[5], "\n", "—", "|", "—", "|", "—", "\n", Main[6], "|", Main[7], "|", Main[8])
+                print("К СОЖАЛЕНИЮ ВЫ ПРОИГРАЛИ.")
+                b=9
+            else:
+                B+=1
