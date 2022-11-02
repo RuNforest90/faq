@@ -1,0 +1,42 @@
+a = [1,5,7,10,9,4,22,-28,-6,-67,-1,-7,-4,-9,-7,0,0,0,0,0,0,0,0,0] (1)
+min = []
+max = []
+o = []
+for i in a:
+    if (i < 0):
+        min.append(i)
+    if (i > 0):
+        max.append(i)
+    if (i == 0):
+        o.append(i)
+
+m = len(min)
+p = len(max)
+null = len(o)
+
+print("отрицательное :",m)
+print(min)
+print("положительное :",p)
+print(max)
+print("нули",null)
+print(o)
+
+
+
+
+
+a=[1, 5, 6, 4, 8, 7, 13, 6, 2,] (3)
+i=len(a)
+w=int(i/2)
+g=0
+e=0
+h=0
+if i%2==0:
+  g=int(w-1)
+  while h<1:
+    print(a[w], a[g])
+    h+=1
+else:
+  while h<1:
+    print(a[w])
+    h+=1
