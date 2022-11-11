@@ -1,0 +1,10 @@
+def m():
+    a = input()
+    b = []
+    for i in range(len(a)):
+        b.append(a[i])
+    b1 = list(set(b))
+    b1.sort()
+    return print(''.join(b1))
+
+m()
