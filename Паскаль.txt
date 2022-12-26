@@ -1,0 +1,22 @@
+const
+    M = 3;
+    N = 5;
+ 
+var
+    matrix: array[1..M,1..N] of integer;
+    i, j: integer;
+ 
+begin
+    writeln ('Введите 15 чисел: ');
+ 
+    for i := 1 to M do
+        for j := 1 to N do
+            read (matrix[i,j]);
+ 
+    for i := 1 to M do begin
+        for j := 1 to N do
+            write (matrix[i,j]:5);
+        writeln
+    end;
+ 
+end.
