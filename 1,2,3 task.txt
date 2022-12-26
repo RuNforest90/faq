@@ -1,0 +1,96 @@
+2.def graphic(arg, SortType=0):
+    arg.sort()
+    if SortType:
+        arg = arg[::-1]
+    for i in arg:
+        for j in range(i):
+            print("#", end='')
+        print(i)
+NumOfArgs = int(input("Number of argument "))
+print("Enter an arguments ")
+arg = [int(input()) for i in range(NumOfArgs)]
+SortType = input("sort types: 1--descending, None--ascending ")
+if SortType:
+    graphic(arg, SortType)
+else:
+    graphic(arg)
+
+
+
+3.import time
+def animation(Wide,Symbol,Duration=1):
+    SymbolPosition = 0
+    IncDec = 1
+    while Duration:
+        for i in range(Wide):
+            print("|", end='')
+            for i in range(SymbolPosition):
+                print(" ", end='')
+            print(Symbol, end='')
+            for i in range(Wide-SymbolPosition):
+                print(" ", end='')
+            print("|")
+            SymbolPosition += IncDec
+            time.sleep(.05)
+        if IncDec == 1:
+            IncDec = -1
+        else:
+            IncDec = 1
+Wide = int(input("Wide field "))
+Symbol = input("Symbol ")
+if Wide < 1 or Symbol == '':
+    print("Wide field's or Symbols's property is null")
+else:
+    Duration = int(input("Duration of animation or None for loop "))
+    if Duration:
+        animation(Wide, Symbol, Duration)
+    else:
+        animation(Wide, Symbol)
+
+
+4.import time
+
+def layer(Wide, SymbolPosition, Symbol=' '):
+        print("|", end='')
+        for i in range(SymbolPosition):
+            print(" ", end='')
+        print(Symbol, end='')
+        for i in range(Wide-SymbolPosition):
+            print(" ", end='')
+        print("|")
+    
+def animation(Wide,Symbol,Cells,Duration=1):
+    SymbolPositionX = 0
+    SymbolPositionY = 0
+    IncDecRow = 1
+    IncDecCol = 1
+    while Duration:
+        for i in range(Wide):
+            for j in range(Cells):
+                if SymbolPositionY == j:
+                    layer(Wide, SymbolPositionX, Symbol)
+                    SymbolPositionX += IncDecRow
+                else:
+                    layer(Wide, SymbolPositionX)
+                if SymbolPositionX == Wide:
+                    IncDecRow = -1
+                elif SymbolPositionX == 0:
+                    IncDecRow = 1
+                if SymbolPositionY == Cells-1:
+                    IncDecCol = -1
+                elif SymbolPositionY == 0:
+                    IncDecCol = 1
+            SymbolPositionY += IncDecCol    
+            time.sleep(.05)  
+            print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")  
+Wide = int(input("Wide of fields "))
+Symbol = input("Symbol ")
+NumOfCell = int(input("Number of cells "))
+if Wide < 1 or Symbol == '' or NumOfCell < 1:
+    print("Wide field's Number of cells Symbols's property is null")
+else:
+    Duration = int(input("Duration of animation or None for loop "))
+    if Duration:
+        animation(Wide, Symbol, NumOfCell, Duration)
+    else:
+        animation(Wide, Symbol, NumOfCell)
